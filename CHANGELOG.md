@@ -2,6 +2,17 @@
 
 All notable changes to `dates-formatter` will be documented in this file
 
+## 1.0.3 - 2024-03-13
+
+### Added
+- Added support for Laravel 7 through 11
+- Added support for newer PHPUnit versions
+- Improved dependency flexibility
+
+# 1.0.2 - 2024-11-13
+
+- Changed support for Carbon to both v2 and v3
+
 ## 1.0.0 - 2024-11-13
 
 - Initial release
@@ -15,6 +26,3 @@ All notable changes to `dates-formatter` will be documented in this file
 - PHPStan static analysis
 - PHP CS Fixer
 
-# 1.0.2 - 2024-11-13
-
-- Changed support for Carbon to both v2 and v3
