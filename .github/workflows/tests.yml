@@ -1,40 +1,30 @@
-name: Tests
+name: Run PHPUnit Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]  # Run tests on pushes to the main branch (or adjust to your preferred branch)
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
-  test:
+  phpunit:
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: true
-      matrix:
-        php: [8.2]
-        laravel: [8.*, 9.*, 10.*, 11.*]
-        exclude:
-          - php: 7.4
-            laravel: 10.*
 
-    name: P${{ matrix.php }} - L${{ matrix.laravel }}
+    strategy:
+      matrix:
+        php-version: [8.2]  # Specify PHP versions you want to test against
 
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Setup PHP
+      - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: ${{ matrix.php }}
-          extensions: dom, curl, libxml, mbstring, zip
-          coverage: none
+          php-version: ${{ matrix.php-version }}
 
       - name: Install dependencies
-        run: |
-          composer require "illuminate/support:${{ matrix.laravel }}" --no-interaction --no-update
-          composer update --prefer-dist --no-interaction --no-progress
+        run: composer install --prefer-dist --no-progress --no-suggest
 
-      - name: Execute tests
-        run: vendor/bin/phpunit
+      - name: Run PHPUnit tests
+        run: vendor/bin/phpunit --testdox
