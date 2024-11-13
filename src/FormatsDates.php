@@ -27,7 +27,7 @@ trait FormatsDates
    */
   public function getFormattedDate(string $property, ?string $format = null): ?string
   {
-    if(!property_exists($this, $property)) {
+    if(!isset($this->{$property})) {
       return null;
     }
     
