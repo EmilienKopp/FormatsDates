@@ -1,0 +1,6 @@
+
+.phpunit.result.cache
+/vendor
+
+*lock.json
+*.lock
