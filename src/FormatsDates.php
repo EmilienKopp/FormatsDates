@@ -68,11 +68,6 @@ trait FormatsDates
    */
   private function determineFormat(string $property): string
   {
-    $format_mapping = [
-      'datetime' => self::$DATETIME_FORMAT,
-      'date' => self::$DATE_FORMAT,
-      'time' => self::$TIME_FORMAT,
-    ];
 
     try {
       $reflector = new ReflectionProperty(get_class($this), $property);
