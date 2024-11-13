@@ -14,3 +14,7 @@ All notable changes to `dates-formatter` will be documented in this file
 - Implement unit tests
 - PHPStan static analysis
 - PHP CS Fixer
+
+# 1.0.2 - 2024-11-13
+
+- Changed support for Carbon to both v2 and v3
