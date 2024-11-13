@@ -136,27 +136,17 @@ $user->birth_date = null;
 $user->birthDate(); // Returns null
 ```
 
-## Testing
-
-```bash
-composer test
-```
-
-## Credits
-
-- [Emilien Kopp](https://github.com/EmilienKopp)
-
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE) for more information.
 
-## Contributing
+## Changelog
 
-Please see [CONTRIBUTING.md](CONTRIBUTING.md) for details.
+Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
 ### Security
 
-If you discover any security related issues, please email [your email] instead of using the issue tracker.
+If you discover any security related issues, please contact me instead of using the issue tracker.
 
 ## Support Laravel Versions
 
