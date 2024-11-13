@@ -2,7 +2,11 @@
 
 All notable changes to `dates-formatter` will be documented in this file
 
-## 1.0.3 - 2024-03-13
+## 1.0.4 - 2024-11-13
+
+- Fix issue with property existence check in getFormattedDate method
+
+## 1.0.3 - 2024-11-13
 
 ### Added
 - Added support for Laravel 7 through 11
